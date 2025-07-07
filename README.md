@@ -89,12 +89,7 @@ This project is licensed under the **MIT License**.
 ## 👩‍💻 Author
 
 Developed with ❤️ by **Sparsh Ranjan**  
-📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/Sparsh Ranjan)
+📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/sparsh-ranjan-b57514289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 
 ---
-
-##👩‍💻 Author
-Developed with ❤️ by Sparsh Ranjan
-📫 Reach out on LinkedIn or contribute to the project!
-[LinkedIn]([https://www.linkedin.com/in/your-username](https://www.linkedin.com/in/sparsh-ranjan-b57514289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app))
 
