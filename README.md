@@ -55,26 +55,43 @@ employee360/
 │
 └── README.md
 
-##🔐 User Roles
-Admin
+yaml
+Copy
+Edit
 
-Full access to employees, departments, leave requests, and salary records
+---
 
-Employee
+## 🔐 User Roles
 
-View personal details, apply for leave, and view salary info
+- **Admin**
+  - Full access to employees, departments, leave requests, and salary records
 
-##📈 Future Enhancements
-📁 Project assignment & tracking
+- **Employee**
+  - View personal details, apply for leave, and view salary info
 
-📧 Email notifications for leave status
+---
 
-📊 Admin analytics dashboard
+## 📈 Future Enhancements
 
-📱 Full mobile responsiveness
+- 📁 Project assignment & tracking  
+- 📧 Email notifications for leave status  
+- 📊 Admin analytics dashboard  
+- 📱 Full mobile responsiveness  
 
-##📄 License
-This project is licensed under the MIT License.
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👩‍💻 Author
+
+Developed with ❤️ by **Sparsh Ranjan**  
+📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/Sparsh Ranjan)
+
+---
 
 ##👩‍💻 Author
 Developed with ❤️ by Sparsh Ranjan
