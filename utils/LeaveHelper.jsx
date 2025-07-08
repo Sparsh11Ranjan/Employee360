@@ -47,7 +47,7 @@ export const LeaveButtons = ({ Id }) => {
   const navigate = useNavigate();
 
   const handleView = (id) => {
-    navigate(`/admin-dashboard/leaves/${id}`); // ✅ fixed typo 'asmin' -> 'admin'
+    navigate(`/admin-dashboard/leaves/${id}`); 
   };
 
   return (
