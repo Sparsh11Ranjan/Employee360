@@ -5,7 +5,6 @@ import express from 'express';
 import cors from 'cors';
 import connectToDatabase from './db/db.js';
 
-// Route imports
 import authRouter from "./routes/auth.js";
 import departmentRouter from "./routes/department.js";
 import employeeRouter from "./routes/employee.js";
@@ -13,6 +12,7 @@ import salaryRouter from "./routes/salary.js";
 import leaveRouter from "./routes/leave.js"; 
 import settingRouter from "./routes/setting.js"
 import dashboardRouter from "./routes/dashboard.js"
+import projectRouter from "./routes/project.js"
 
 const app = express();
 connectToDatabase();
@@ -28,6 +28,8 @@ app.use("/api/salary", salaryRouter);
 app.use("/api/leave", leaveRouter);
 app.use("/api/setting", settingRouter);
 app.use("/api/dashboard", dashboardRouter); 
+app.use("/api/projects", projectRouter);
+
 
 console.log("Employee routes mounted at /api/employees");
 
