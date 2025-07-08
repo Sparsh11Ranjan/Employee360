@@ -1,11 +1,10 @@
 import Salary from "../models/Salary.js";
 import Employee from "../models/Employee.js"
-/** ✅ Add Salary Record */
+
 const addSalary = async (req, res) => {
   try {
     const { employeeId, basicSalary, allowances, deductions, payDate } = req.body;
 
-    // Convert all to numbers safely
     const base = parseFloat(basicSalary) || 0;
     const allow = parseFloat(allowances) || 0;
     const deduct = parseFloat(deductions) || 0;
@@ -30,7 +29,6 @@ const addSalary = async (req, res) => {
   }
 };
 
-/** ✅ Get All Salary Records of an Employee */
 const getSalary = async (req, res) => {
   try {
     const { id } = req.params;
