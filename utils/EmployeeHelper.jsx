@@ -2,9 +2,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/authContext';
 
-/** -----------------------------------
- * Employee Action Buttons
- * ---------------------------------- */
+
 export const EmployeeButtons = ({ _id }) => {
   const navigate = useNavigate();
   
@@ -30,7 +28,7 @@ export const EmployeeButtons = ({ _id }) => {
       </button>
       <button
         className="bg-red-600 hover:bg-red-800 text-white text-xs px-3 py-1 rounded-md shadow transition"
-        onClick={() => navigate(`/admin-dashboard/employees/leaves/${_id}`)}  // ✅ Fixed route
+        onClick={() => navigate(`/admin-dashboard/employees/leaves/${_id}`)}  
       >
         Leave
       </button>
@@ -38,9 +36,7 @@ export const EmployeeButtons = ({ _id }) => {
   );
 };
 
-/** -----------------------------------
- * Employee DataTable Columns
- * ---------------------------------- */
+
 export const columns = [
   {
     name: "S.No",
@@ -85,9 +81,6 @@ export const columns = [
   },
 ];
 
-/** -----------------------------------
- * Fetch all departments
- * ---------------------------------- */
 export const fetchDepartments = async () => {
   try {
     const token = localStorage.getItem('token');
@@ -105,9 +98,7 @@ export const fetchDepartments = async () => {
   }
 };
 
-/** -----------------------------------
- * Get employees by department ID
- * ---------------------------------- */
+
 export const getEmployees = async (departmentId) => {
   try {
     const token = localStorage.getItem('token');
