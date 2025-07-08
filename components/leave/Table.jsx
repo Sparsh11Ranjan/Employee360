@@ -7,7 +7,7 @@ const Table = () => {
   const [leaves, setLeaves] = useState([]);
   const [filteredLeaves, setFilteredLeaves] = useState([]);
   const [searchText, setSearchText] = useState('');
-  const [statusFilter, setStatusFilter] = useState(''); // "", "Approved", etc.
+  const [statusFilter, setStatusFilter] = useState(''); 
 
   const fetchLeaves = async () => {
     try {
@@ -26,7 +26,7 @@ const Table = () => {
           name: leave.employeeId?.userId?.name || 'N/A',
           leaveType: leave.leaveType || 'N/A',
           department: leave.employeeId?.department?.dep_name || 'N/A',
-          rawStatus: leave.status, // Keep raw value for filtering
+          rawStatus: leave.status, 
           status: <StatusPill status={leave.status} />,
           days:
             Math.max(
@@ -52,7 +52,6 @@ const Table = () => {
     fetchLeaves();
   }, []);
 
-  // ✅ Apply filtering when text or status changes
   useEffect(() => {
     let filtered = leaves;
 
