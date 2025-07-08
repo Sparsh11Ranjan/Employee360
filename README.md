@@ -97,15 +97,20 @@ Backend runs on: http://localhost:5000
 
 -**Admin**
 
--Full access to employees, departments, projects, leave requests, and salary records
-
--Can assign projects to employees and track their status
+- Can add, edit, view employees
+- Can add or delete departments
+- Assign projects to employees
+- Grant leaves
+- Add Salary
+- Change Password
 
 -**Employee**
 
--View personal details, apply for leave, and view salary & project info
-
--Can mark assigned projects as completed
+- View Profile
+- Add Leave requests
+- View assigned Projects and mark them as completed
+- Salary records
+- Change Password
 ---
 
 ## 📈 Future Enhancements
