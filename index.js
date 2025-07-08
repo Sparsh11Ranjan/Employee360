@@ -10,7 +10,7 @@ import authRouter from "./routes/auth.js";
 import departmentRouter from "./routes/department.js";
 import employeeRouter from "./routes/employee.js";
 import salaryRouter from "./routes/salary.js";
-import leaveRouter from "./routes/leave.js"; // ✅ fixed
+import leaveRouter from "./routes/leave.js"; 
 import settingRouter from "./routes/setting.js"
 import dashboardRouter from "./routes/dashboard.js"
 
