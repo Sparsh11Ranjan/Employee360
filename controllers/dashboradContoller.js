@@ -4,21 +4,16 @@ import Leave from "../models/Leave.js";
 
 const getSummary = async (req, res) => {
   try {
-    // 1. Total employees
     const totalEmployees = await Employee.countDocuments();
 
-    // 2. Total departments
     const totalDepartments = await Department.countDocuments();
 
-    // 3. Total salary (aggregated)
     const totalSalaries = await Employee.aggregate([
       { $group: { _id: null, totalSalary: { $sum: "$salary" } } }
     ]);
 
-    // 4. Unique employees who applied for leave
     const employeeAppliedForLeave = await Leave.distinct("employeeId");
 
-    // 5. Leave status counts
     const leaveStatus = await Leave.aggregate([
       {
         $group: {
@@ -28,7 +23,6 @@ const getSummary = async (req, res) => {
       }
     ]);
 
-    // 6. Organize leave summary by status
     const leaveSummary = {
       appliedFor: employeeAppliedForLeave.length,
       approved: leaveStatus.find((item) => item._id === "Approved")?.count || 0,
