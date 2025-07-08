@@ -28,6 +28,7 @@
 
 ## 📁 Project Structure
 
+```bash
 employee360/
 ├── backend/
 │ ├── controllers/ # Business logic
@@ -54,11 +55,7 @@ employee360/
 │ └── package.json # Frontend dependencies
 │
 └── README.md
-
-yaml
-Copy
-Edit
-
+```
 ---
 
 ## 🔐 User Roles
