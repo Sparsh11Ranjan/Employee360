@@ -126,7 +126,6 @@ const Detail = () => {
   );
 };
 
-// ✅ Reusable detail row
 const ProfileItem = ({ label, value }) => (
   <div className="flex items-center">
     <p className="w-40 text-cyan-800 font-semibold">{label}:</p>
