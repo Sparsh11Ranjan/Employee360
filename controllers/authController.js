@@ -2,24 +2,20 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import User from '../models/Users.js';
 
-// Login Controller
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Check if user exists
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ success: false, error: 'Invalid Credentials' });
     }
 
-    // Compare password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ success: false, error: 'Invalid Credentials' });
     }
 
-    // Create JWT token
     const token = jwt.sign({ _id: user._id, role: user.role }, process.env.JWT_KEY, {
       expiresIn: '7d',
     });
@@ -41,7 +37,6 @@ export const login = async (req, res) => {
   }
 };
 
-// Verify Controller
 export const verify = async (req, res) => {
   try {
     const token = req.headers.authorization?.split(' ')[1];
