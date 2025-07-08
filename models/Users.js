@@ -31,11 +31,11 @@ const userSchema = new mongoose.Schema(
 
     profileImage: {
       type: String,
-      default: "", // Can store filename or full URL if you use cloud storage
+      default: "", 
     },
   },
   {
-    timestamps: true, // Adds createdAt and updatedAt automatically
+    timestamps: true, 
   }
 );
 
