@@ -56,6 +56,7 @@ employee360/
 │ └── package.json       # Frontend dependencies
 │
 └── README.md
+```
 
 
 ## ⚙️ Getting Started
