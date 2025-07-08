@@ -1,6 +1,6 @@
 # 👩‍💼 Employee360 – Complete Workforce Management System
 
-**Employee360** is a full-featured Employee Management System built with the **MERN stack**. Designed to streamline HR operations, it enables admins and employees to manage departments, leaves, salaries, and more through a clean, role-based dashboard.
+**Employee360** is a full-featured Employee Management System built with the **MERN stack**. Designed to streamline HR operations, it enables admins and employees to manage departments, leaves, salaries, projects, and more through a clean, role-based dashboard.
 
 ---
 
@@ -11,6 +11,7 @@
 - 🏢 **Department Control** – Manage multiple departments and assign employees
 - 📝 **Leave Management** – Apply for and approve leaves with real-time status
 - 💰 **Salary Module** – Track and view employee salary records
+- 📁 **Project Assignment** – Admins assign and track employee projects; employees mark them completed
 - 📂 **Modular Codebase** – Clean folder structure for scalability
 - ⚡ **Responsive UI** – Built with React and Tailwind for fast and modern UX
 
@@ -30,33 +31,32 @@
 
 ```bash
 employee360/
-├── backend/
-│ ├── controllers/ # Business logic
-│ ├── db/ # MongoDB connection
-│ ├── middleware/ # Auth middleware
-│ ├── models/ # Mongoose schemas
-│ ├── public/ # Static files (if any)
-│ ├── routes/ # API endpoints
-│ ├── userSeed.js # Dummy data seeder
-│ ├── .env # Environment variables
-│ └── index.js # Entry point for server
+├── Server/
+│ ├── controllers/       # Business logic
+│ ├── db/                # MongoDB connection
+│ ├── middleware/        # Auth middleware
+│ ├── models/            # Mongoose schemas (User, Employee, Department, Leave, Project)
+│ ├── public/            # Static files 
+│ ├── routes/            # API endpoints
+│ ├── userSeed.js        # Dummy data seeder
+│ ├── .env               # Environment variables
+│ └── index.js           # Entry point for server
 │
 ├── frontend/
 │ ├── src/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── context/ # Auth and global state
-│ │ ├── pages/ # Route-level pages
-│ │ ├── utils/ # Helper functions
-│ │ ├── App.jsx # App routes
-│ │ ├── index.css # Styles
-│ │ └── main.jsx # Entry point
-│ ├── public/ # Static assets
-│ ├── vite.config.js # Vite config
-│ └── package.json # Frontend dependencies
+│ │ ├── components/      # Reusable UI components 
+│ │ ├── context/         # Auth and global state
+│ │ ├── pages/           # Route-level pages
+│ │ ├── utils/           # Helper functions
+│ │ ├── App.jsx          # App routes
+│ │ ├── index.css        # Styles
+│ │ └── main.jsx         # Entry point
+│ ├── public/            # Static assets
+│ ├── vite.config.js     # Vite config
+│ └── package.json       # Frontend dependencies
 │
 └── README.md
-```
----
+
 
 ## ⚙️ Getting Started
 
@@ -94,20 +94,25 @@ Backend runs on: http://localhost:5000
 
 ## 🔐 User Roles
 
-- **Admin**
-  - Full access to employees, departments, leave requests, and salary records
+-**Admin**
 
-- **Employee**
-  - View personal details, apply for leave, and view salary info
+-Full access to employees, departments, projects, leave requests, and salary records
 
+-Can assign projects to employees and track their status
+
+-**Employee**
+
+-View personal details, apply for leave, and view salary & project info
+
+-Can mark assigned projects as completed
 ---
 
 ## 📈 Future Enhancements
 
-- 📁 Project assignment & tracking  
-- 📧 Email notifications for leave status  
-- 📊 Admin analytics dashboard  
-- 📱 Full mobile responsiveness  
+-📧 Email notifications for leave/project status
+-📊 Admin analytics dashboard (graphs/charts)
+-📱 Full mobile responsiveness
+-📤 File attachments with projects or leave requests
 
 ---
 
