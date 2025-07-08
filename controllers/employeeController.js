@@ -6,20 +6,17 @@ import Employee from "../models/Employee.js";
 import User from "../models/Users.js";
 import Department from "../models/Department.js";
 
-// Ensure uploads directory exists
 const uploadPath = "public/uploads";
 if (!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath, { recursive: true });
 }
 
-// Multer Config
 const storage = multer.diskStorage({
   destination: (_, __, cb) => cb(null, uploadPath),
   filename: (_, file, cb) => cb(null, Date.now() + path.extname(file.originalname)),
 });
 const upload = multer({ storage });
 
-// ✅ Add New Employee
 const addEmployee = async (req, res) => {
   try {
     const {
@@ -80,7 +77,6 @@ const addEmployee = async (req, res) => {
   }
 };
 
-// ✅ Get All Employees
 const getEmployees = async (req, res) => {
   try {
     const employees = await Employee.find()
@@ -94,7 +90,6 @@ const getEmployees = async (req, res) => {
   }
 };
 
-// ✅ Get Single Employee by ID
 const getEmployee = async (req, res) => {
   const { id } = req.params;
   console.log("🔍 Hitting getEmployee with ID:", id);
@@ -118,7 +113,6 @@ const getEmployee = async (req, res) => {
   }
 };
 
-// ✅ Edit Employee
 const editEmployee = async (req, res) => {
   try {
     const employeeId = req.params.id;
@@ -141,7 +135,6 @@ const editEmployee = async (req, res) => {
     if (user) {
       user.name = name || user.name;
 
-      // Replace profile image
       if (req.file) {
         if (user.profileImage) {
           const oldImagePath = path.join(uploadPath, user.profileImage);
@@ -172,13 +165,12 @@ const editEmployee = async (req, res) => {
   }
 };
 
-// ✅ Get Employees by Department ID
 const fetchEmployeesByDepId = async (req, res) => {
   const { id } = req.params;
   try {
     const employees = await Employee.find({ department: id })
-      .populate("userId", "name") // only bring `name` field from User
-      .select("_id employeeId userId"); // keep it lightweight
+      .populate("userId", "name") 
+      .select("_id employeeId userId"); 
 
     return res.status(200).json({ success: true, employees });
   } catch (error) {
