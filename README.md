@@ -95,7 +95,7 @@ Backend runs on: http://localhost:5000
 
 ## 🔐 User Roles
 
--**Admin**
+- **Admin**
 
 - Can add, edit, view employees
 - Can add or delete departments
@@ -104,7 +104,7 @@ Backend runs on: http://localhost:5000
 - Add Salary
 - Change Password
 
--**Employee**
+- **Employee**
 
 - View Profile
 - Add Leave requests
@@ -115,10 +115,10 @@ Backend runs on: http://localhost:5000
 
 ## 📈 Future Enhancements
 
--📧 Email notifications for leave/project status
--📊 Admin analytics dashboard (graphs/charts)
--📱 Full mobile responsiveness
--📤 File attachments with projects or leave requests
+- 📧 Email notifications for leave/project status
+- 📊 Admin analytics dashboard (graphs/charts)
+- 📱 Full mobile responsiveness
+- 📤 File attachments with projects or leave requests
 
 ---
 
