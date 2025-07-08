@@ -58,6 +58,40 @@ employee360/
 ```
 ---
 
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the Repo
+
+```bash
+git clone https://github.com/Sparsh11Ranjan/employee360.git
+cd employee360
+```
+### 2️⃣ Setup the Backend
+
+```
+cd Server
+npm install
+
+* Create a .env file:
+PORT=5000
+MONGODB_URL=mongodb://localhost:27017/ems
+JWT_KEY=WhyamisounluckyineverythingTodayistheworstdayofmylife
+
+* Check the backend server:
+node index.js
+```
+### 3️⃣ Setup the Frontend
+```
+cd Frontend
+npm install
+npm run dev
+Frontend will start on: http://localhost:5173
+Backend runs on: http://localhost:5000
+```
+
+
+---
+
 ## 🔐 User Roles
 
 - **Admin**
