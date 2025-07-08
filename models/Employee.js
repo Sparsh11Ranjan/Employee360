@@ -40,7 +40,7 @@ const employeeSchema = new Schema(
     },
   },
   {
-    timestamps: true, // Automatically manages createdAt and updatedAt
+    timestamps: true, 
   }
 );
 
